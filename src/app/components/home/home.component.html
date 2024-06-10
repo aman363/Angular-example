@@ -1,0 +1,40 @@
+<p>this is home component</p>
+<!-- {{assessmentName}} -->
+
+<!-- <div *ngFor="let aName of arrAssessmentNames">
+    {{aName}}
+</div> -->
+
+    <table class="table">
+        <tbody>
+        <tr >
+            <td *ngFor="let aName of arrAssessments">
+                <div class="card" >
+                    <img [src]="aName.img_path" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{aName.assessmentName}}</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <button class="btn btn-primary" (click)="displayDetails(aName.assessmentName,aName.assessmentTotalMarks)" >View More</button>
+                    </div>
+                  </div>  
+            </td>
+        </tr>
+    </tbody>
+    </table>
+<!-- <div > -->
+    <!-- {{aName.id}} {{aName.assessmentName}} {{aName.assessmentTotalMarks}} -->
+     <!-- <div class="col-md-4">
+    <div class="card" >
+        <img src="Images/angular.png" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{aName.assessmentName}}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="" class="btn btn-primary">View More</a>
+        </div>
+      </div>
+    </div> -->
+<!-- </div> -->
+<!-- 
+<div *ngFor="let items of arrUsers">
+    {{items.id}} {{items.firstName}} {{items.lastName}}
+</div> -->

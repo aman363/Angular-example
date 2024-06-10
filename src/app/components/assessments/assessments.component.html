@@ -1,0 +1,19 @@
+<table class="table">
+    <tbody>
+    <tr >
+        <td *ngFor="let aName of arrAssessments">
+            <div class="card" >
+                <img [src]="aName.img_path" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{aName.assessmentName}}</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <a href="" class="btn btn-primary">View More</a>
+                    <button class="btn btn-success">Add to Cart</button>
+                </div>
+                </div>
+              </div>  
+        </td>
+    </tr>
+</tbody>
+</table>
