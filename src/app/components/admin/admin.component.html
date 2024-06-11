@@ -1,1 +1,135 @@
-<p>admin works!</p>
+<div class="row">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">User</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="courses-tab" data-bs-toggle="tab" data-bs-target="#courses-tab-pane" type="button" role="tab" aria-controls="courses-tab-pane" aria-selected="false">Courses</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="coursecategories-tab" data-bs-toggle="tab" data-bs-target="#coursecategories-tab-pane" type="button" role="tab" aria-controls="coursecategories-tab-pane" aria-selected="false">CourseCategories</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="assessments-tab" data-bs-toggle="tab" data-bs-target="#assessments-tab-pane" type="button" role="tab" aria-controls="assessments-tab-pane" aria-selected="false">Assessments</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="assessmentscores-tab" data-bs-toggle="tab" data-bs-target="#assessmentscores-tab-pane" type="button" role="tab" aria-controls="assessmentscores-tab-pane" aria-selected="false">AssessmentScores</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="reports-tab" data-bs-toggle="tab" data-bs-target="#reports-tab-pane" type="button" role="tab" aria-controls="reports-tab-pane" aria-selected="false">Reports</button>
+          </li>
+      </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="add-tab" data-bs-toggle="tab" data-bs-target="#add-tab-pane" type="button" role="tab" aria-controls="add-tab-pane" aria-selected="true">Add</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="view-tab" data-bs-toggle="tab" data-bs-target="#view-tab-pane" type="button" role="tab" aria-controls="view-tab-pane" aria-selected="false">View</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="update-tab" data-bs-toggle="tab" data-bs-target="#update-tab-pane" type="button" role="tab" aria-controls="update-tab-pane" aria-selected="false">Update</button>
+                </li>
+                
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="add-tab-pane" role="tabpanel" aria-labelledby="add-tab" tabindex="0">
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td><button type="submit" class="btn btn-primary">Delete</button></td>
+                            
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td><button type="submit" class="btn btn-primary">Delete</button></td>
+                            
+                        
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td><button type="submit" class="btn btn-primary">Delete</button></td>
+                            
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                <div class="tab-pane fade" id="view-tab-pane" role="tabpanel" aria-labelledby="view-tab" tabindex="0">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td><button type="submit" class="btn btn-primary">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td><button type="submit" class="btn btn-primary">Edit</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td><button type="submit" class="btn btn-primary">Edit</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div class="tab-pane fade" id="update-tab-pane" role="tabpanel" aria-labelledby="update-tab" tabindex="0">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td><button type="submit" class="btn btn-primary">Save</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td><button type="submit" class="btn btn-primary">Save</button></td>
+                            </tr>
+                            <tr>
+                                <th scope="row">3</th>
+                                <td>Larry</td>
+                                <td><button type="submit" class="btn btn-primary">Save</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+              </div>
+        </div>
+        <div class="tab-pane fade" id="courses-tab-pane" role="tabpanel" aria-labelledby="courses-tab" tabindex="0">...</div>
+        <div class="tab-pane fade" id="coursecategories-tab-pane" role="tabpanel" aria-labelledby="coursecategories-tab" tabindex="0">...</div>
+        <div class="tab-pane fade" id="assessments-tab-pane" role="tabpanel" aria-labelledby="assessments-tab" tabindex="0">...</div>
+        <div class="tab-pane fade" id="assessmentscores-tab-pane" role="tabpanel" aria-labelledby="assessmentscores-tab" tabindex="0">...</div>
+        <div class="tab-pane fade" id="reports-tab-pane" role="tabpanel" aria-labelledby="reports-tab" tabindex="0">...</div>
+      </div>
+</div>

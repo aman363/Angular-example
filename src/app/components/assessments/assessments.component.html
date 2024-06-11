@@ -1,8 +1,34 @@
+<!-- <div>
+    <ul [ngSwitch]="choice">
+        <li *ngSwitchCase="1">First Choice</li>
+        <li *ngSwitchCase="2">Second Choice</li>
+        <li *ngSwitchCase="3">third Choice</li>
+        <li *ngSwitchCase="4">Fourth Choice</li>
+        <li *ngSwitchCase="2">Second Choice, again</li>
+        <li *ngSwitchDefault>Default Choice</li>
+    </ul>
+</div>
+<div>
+    <button class="btn btn-primary" (click)="nextChoice()">Next Choice</button>
+</div> -->
+
+
+<div>
+    <div [ngClass]="{bordered:false}">This is not bordered</div>
+    <div [ngClass]="{bordered:true}">This is bordered</div>
+    <!-- <div [ngClass]="{bordered:isBordered}">This is also bordered</div> -->
+</div>
+
+<div [ngClass]="classesObj">
+    Using object var Border {{classesObj.bordered? "ON":"OFF"}}
+</div>
+
+<button class="btn btn-primary" (click)="toggleBorder()">Toggle</button>
 <table class="table">
     <tbody>
     <tr >
         <td *ngFor="let aName of arrAssessments">
-            <div class="card" >
+            <div *ngIf="aName.active" class="card" >
                 <img [src]="aName.img_path" class="card-img-top" alt="...">
                 <div class="card-body">
                   <h5 class="card-title">{{aName.assessmentName}}</h5>
