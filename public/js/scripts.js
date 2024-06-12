@@ -1,4 +1,4 @@
-alert("alert");
+
 function validateLoginForm() {
     var form = document.getElementById('loginForm');
     if (form.checkValidity() === false) {
