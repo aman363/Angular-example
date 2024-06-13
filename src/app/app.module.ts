@@ -11,6 +11,8 @@ import { AssessmentsComponent } from './components/assessments/assessments.compo
 import { AdminComponent } from './components/admin/admin.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { BannerComponent } from './components/banner/banner.component';
+import { AddUserComponent } from './components/add-user/add-user.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,11 +24,14 @@ import { BannerComponent } from './components/banner/banner.component';
     AssessmentsComponent,
     AdminComponent,
     ContactUsComponent,
-    BannerComponent
+    BannerComponent,
+    AddUserComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()

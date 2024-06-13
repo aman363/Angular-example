@@ -15,11 +15,7 @@ export class HomeComponent{
         new Assessment(2,"Node Js",100,"assets/Images/nodejs.png",true),
         new Assessment(3,"Python",100,"assets/Images/python.jpeg",true)
     ]
-    arrUsers=[
-        new User(1,"Jack","S"),
-        new User(2,"Mike","K"),
-        new User(3,"Jacob","M")
-    ]
+    
 
     displayDetails(aName:string,aMarks:number){
         console.log("details Requested..")
