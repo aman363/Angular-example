@@ -9,12 +9,7 @@ export class AssessmentService {
 
   constructor() {
     this.arrAssessments=[
-      new Assessment(1,"Angluar",100,"assets/Images/angular.png",true),
-      new Assessment(2,"Node Js",100,"assets/Images/nodejs.png",true),
-      new Assessment(3,"Python",100,"assets/Images/python.jpeg",true),
-      new Assessment(4,"Angluar",100,"assets/Images/angular.png",true),
-      new Assessment(5,"Node Js",100,"assets/Images/nodejs.png",false),
-      new Assessment(6,"Python",100,"assets/Images/python.jpeg",false)
+  
   ]
    }
 
@@ -28,6 +23,6 @@ export class AssessmentService {
         return this.arrAssessments[i]
       }
     }
-    return new Assessment(0,'',0,'',true)
+    return new Assessment(0,'',new Date(),'',[],0)
    }
 }

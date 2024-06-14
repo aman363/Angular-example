@@ -1,0 +1,30 @@
+<div class="container mt-5">
+    <h2>Add Course Form</h2>
+    <form [formGroup]="addCourseForm" (ngSubmit)="onSubmit(addCourseForm.value)">
+        <div class="mb-3">
+            <label for="idInput" class="form-label">Course ID</label>
+            <input type="number" id="idInput" class="form-control" placeholder="Course ID" formControlName="id">
+            <div *ngIf="f['id'].invalid && (f['id'].dirty || f['id'].touched)" style="color: red;">
+                <div *ngIf="f['id'].errors?.['required']">Course ID is required</div>
+                <div *ngIf="f['id'].errors?.['min']">Course ID must be greater than zero</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="cNameInput" class="form-label">Course Name</label>
+            <input type="text" id="cNameInput" class="form-control" placeholder="Course Name" formControlName="cName">
+            <div *ngIf="f['cName'].invalid && (f['cName'].dirty || f['cName'].touched)" style="color: red;">
+                <div *ngIf="f['cName'].errors?.['required']">Course Name is required</div>
+                <div *ngIf="f['cName'].errors?.['minlength']">Course Name must be at least 3 characters long</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="cDescriptionInput" class="form-label">Course Description</label>
+            <textarea id="cDescriptionInput" class="form-control" placeholder="Course Description" formControlName="cDescription"></textarea>
+            <div *ngIf="f['cDescription'].invalid && (f['cDescription'].dirty || f['cDescription'].touched)" style="color: red;">
+                <div *ngIf="f['cDescription'].errors?.['required']">Course Description is required</div>
+                <div *ngIf="f['cDescription'].errors?.['maxlength']">Course Description cannot exceed 500 characters</div>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="addCourseForm.invalid">Submit</button>
+    </form>
+</div>

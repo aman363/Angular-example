@@ -1,70 +1,105 @@
 <div class="container mt-5">
     <h2>Add User Form</h2>
     <form [formGroup]="addUserForm" (ngSubmit)="onSubmit(addUserForm.value)">
-        <div class="row">
-            <!-- Personal Details Column -->
-            <div class="col-md-6">
-                <div class="mb-3">
-                    <label for="idInput" class="form-label">ID</label>
-                    <input type="number" id="idInput" class="form-control" placeholder="ID" formControlName="id">
-                </div>
-                <div class="mb-3">
-                    <label for="firstNameInput" class="form-label">First Name</label>
-                    <input type="text" id="firstNameInput" class="form-control" placeholder="First Name" formControlName="firstName">
-                </div>
-                <div class="mb-3">
-                    <label for="lastNameInput" class="form-label">Last Name</label>
-                    <input type="text" id="lastNameInput" class="form-control" placeholder="Last Name" formControlName="lastName">
-                </div>
-                <div class="mb-3">
-                    <label for="dobInput" class="form-label">Date of Birth</label>
-                    <input type="date" id="dobInput" class="form-control" placeholder="Date of Birth" formControlName="dob">
-                </div>
-                <div class="mb-3">
-                    <label for="emailInput" class="form-label">Email</label>
-                    <input type="email" id="emailInput" class="form-control" placeholder="Email" formControlName="email">
-                </div>
-                <div class="mb-3">
-                    <label for="mobileInput" class="form-label">Mobile</label>
-                    <input type="tel" id="mobileInput" class="form-control" placeholder="Mobile" formControlName="mobile">
-                </div>
-                <div class="mb-3">
-                    <label for="roleInput" class="form-label">Role</label>
-                    <input type="text" id="roleInput" class="form-control" placeholder="Role" formControlName="role">
-                </div>
-            </div>
-
-            <!-- Address Details Column -->
-            <div class="col-md-6">
-                <fieldset class="border p-3 mb-3">
-                    <legend class="w-auto px-2">Address</legend>
-                    <div class="mb-3">
-                        <label for="houseNoInput" class="form-label">House No</label>
-                        <input type="text" id="houseNoInput" class="form-control" placeholder="House No" formControlName="houseNo">
-                    </div>
-                    <div class="mb-3">
-                        <label for="streetInput" class="form-label">Street</label>
-                        <input type="text" id="streetInput" class="form-control" placeholder="Street" formControlName="street">
-                    </div>
-                    <div class="mb-3">
-                        <label for="areaInput" class="form-label">Area</label>
-                        <input type="text" id="areaInput" class="form-control" placeholder="Area" formControlName="area">
-                    </div>
-                    <div class="mb-3">
-                        <label for="stateInput" class="form-label">State</label>
-                        <input type="text" id="stateInput" class="form-control" placeholder="State" formControlName="state">
-                    </div>
-                    <div class="mb-3">
-                        <label for="countryInput" class="form-label">Country</label>
-                        <input type="text" id="countryInput" class="form-control" placeholder="Country" formControlName="country">
-                    </div>
-                    <div class="mb-3">
-                        <label for="pincodeInput" class="form-label">Pincode</label>
-                        <input type="text" id="pincodeInput" class="form-control" placeholder="Pincode" formControlName="pincode">
-                    </div>
-                </fieldset>
+        <div class="mb-3">
+            <label for="idInput" class="form-label">ID</label>
+            <input type="number" id="idInput" class="form-control" placeholder="ID" formControlName="id">
+            <div *ngIf="f['id'].invalid && (f['id'].dirty || f['id'].touched)" style="color: red;">
+                <div *ngIf="f['id'].errors?.['required']">Id is required</div>
             </div>
         </div>
+        <div class="mb-3">
+            <label for="firstNameInput" class="form-label">First Name</label>
+            <input type="text" id="firstNameInput" class="form-control" placeholder="First Name" formControlName="firstName">
+            <div *ngIf="f['firstName'].invalid && (f['firstName'].dirty || f['firstName'].touched)" style="color: red;">
+                <div *ngIf="f['firstName'].errors?.['required']">First Name is required</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="lastNameInput" class="form-label">Last Name</label>
+            <input type="text" id="lastNameInput" class="form-control" placeholder="Last Name" formControlName="lastName">
+            <div *ngIf="f['lastName'].invalid && (f['lastName'].dirty || f['lastName'].touched)" style="color: red;">
+                <div *ngIf="f['lastName'].errors?.['required']">Last Name is required</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="dobInput" class="form-label">Date of Birth</label>
+            <input type="date" id="dobInput" class="form-control" placeholder="Date of Birth" formControlName="dob">
+            <div *ngIf="f['dob'].invalid && (f['dob'].dirty || f['dob'].touched)" style="color: red;">
+                <div *ngIf="f['dob'].errors?.['required']">Date of Birth is required</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="emailInput" class="form-label">Email</label>
+            <input type="email" id="emailInput" class="form-control" placeholder="Email" formControlName="email">
+            <div *ngIf="f['email'].invalid && (f['email'].dirty || f['email'].touched)" style="color: red;">
+                <div *ngIf="f['email'].errors?.['required']">Email is required</div>
+                <div *ngIf="f['email'].errors?.['email']">Email is invalid</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="mobileInput" class="form-label">Mobile</label>
+            <input type="tel" id="mobileInput" class="form-control" placeholder="Mobile" formControlName="mobile">
+            <div *ngIf="f['mobile'].invalid && (f['mobile'].dirty || f['mobile'].touched)" style="color: red;">
+                <div *ngIf="f['mobile'].errors?.['required']">Mobile is required</div>
+                <div *ngIf="f['mobile'].errors?.['pattern']">Mobile must be a valid 10-digit number</div>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="roleInput" class="form-label">Role</label>
+            <input type="text" id="roleInput" class="form-control" placeholder="Role" formControlName="role">
+            <div *ngIf="f['role'].invalid && (f['role'].dirty || f['role'].touched)" style="color: red;">
+                <div *ngIf="f['role'].errors?.['required']">Role is required</div>
+            </div>
+        </div>
+        <fieldset formGroupName="address">
+            <legend>Address</legend>
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="houseNoInput" class="form-label">House No</label>
+                    <input type="text" id="houseNoInput" class="form-control" placeholder="House No" formControlName="houseNo">
+                    <div *ngIf="f['address']?.get('houseNo')?.invalid && (f['address']?.get('houseNo')?.dirty || f['address']?.get('houseNo')?.touched)" style="color: red;">
+                        <div *ngIf="f['address']?.get('houseNo')?.errors?.['required']">House No is required</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="streetInput" class="form-label">Street</label>
+                    <input type="text" id="streetInput" class="form-control" placeholder="Street" formControlName="street">
+                    <div *ngIf="f['address']?.get('street')?.invalid && (f['address']?.get('street')?.dirty || f['address']?.get('street')?.touched)" style="color: red;">
+                        <div *ngIf="f['address']?.get('street')?.errors?.['required']">Street is required</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="areaInput" class="form-label">Area</label>
+                    <input type="text" id="areaInput" class="form-control" placeholder="Area" formControlName="area">
+                    <div *ngIf="f['address']?.get('area')?.invalid && (f['address']?.get('area')?.dirty || f['address']?.get('area')?.touched)" style="color: red;">
+                        <div *ngIf="f['address']?.get('area')?.errors?.['required']">Area is required</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="stateInput" class="form-label">State</label>
+                    <input type="text" id="stateInput" class="form-control" placeholder="State" formControlName="state">
+                    <div *ngIf="f['address']?.get('state')?.invalid && (f['address']?.get('state')?.dirty || f['address']?.get('state')?.touched)" style="color: red;">
+                        <div *ngIf="f['address']?.get('state')?.errors?.['required']">State is required</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="countryInput" class="form-label">Country</label>
+                    <input type="text" id="countryInput" class="form-control" placeholder="Country" formControlName="country">
+                    <div *ngIf="f['address']?.get('country')?.invalid && (f['address']?.get('country')?.dirty || f['address']?.get('country')?.touched)" style="color: red;">
+                        <div *ngIf="f['address']?.get('country')?.errors?.['required']">Country is required</div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="pincodeInput" class="form-label">Pincode</label>
+                    <input type="text" id="pincodeInput" class="form-control" placeholder="Pincode" formControlName="pincode">
+                    <div *ngIf="f['address']?.get('pincode')?.invalid && (f['address']?.get('pincode')?.dirty || f['address']?.get('pincode')?.touched)" style="color: red;">
+                        <div *ngIf="f['address']?.get('pincode')?.errors?.['required']">Pincode is required</div>
+                        <div *ngIf="f['address']?.get('pincode')?.errors?.['pattern']">Pincode must be a valid 5 or 6-digit number</div>
+                    </div>
+                </div>
+            </div>
+        </fieldset>
         <button type="submit" class="btn btn-primary">Submit</button>
     </form>
 </div>

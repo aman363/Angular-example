@@ -97,7 +97,33 @@
                 
               </div>
         </div>
-        <div class="tab-pane fade" id="courses-tab-pane" role="tabpanel" aria-labelledby="courses-tab" tabindex="0">...</div>
+        <div class="tab-pane fade" id="courses-tab-pane" role="tabpanel" aria-labelledby="courses-tab" tabindex="0">
+          <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="course-add-tab" data-bs-toggle="tab" data-bs-target="#course-add-tab-pane" type="button" role="tab" aria-controls="course-add-tab-pane" aria-selected="true">Add</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="course-view-tab" data-bs-toggle="tab" data-bs-target="#course-view-tab-pane" type="button" role="tab" aria-controls="course-view-tab-pane" aria-selected="false">View</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="course-update-tab" data-bs-toggle="tab" data-bs-target="#course-update-tab-pane" type="button" role="tab" aria-controls="course-update-tab-pane" aria-selected="false">Update</button>
+            </li>
+            
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="course-add-tab-pane" role="tabpanel" aria-labelledby="course-add-tab" tabindex="0">
+                <app-add-course></app-add-course>
+            </div>
+            <div class="tab-pane fade" id="course-view-tab-pane" role="tabpanel" aria-labelledby="course-view-tab" tabindex="0">
+                <p>coruse view</p>
+            </div>
+            
+            <div class="tab-pane fade" id="course-update-tab-pane" role="tabpanel" aria-labelledby="course-update-tab" tabindex="0">
+                <p>course update</p>
+            </div>
+            
+          </div>
+        </div>
         <div class="tab-pane fade" id="coursecategories-tab-pane" role="tabpanel" aria-labelledby="coursecategories-tab" tabindex="0">...</div>
         <div class="tab-pane fade" id="assessments-tab-pane" role="tabpanel" aria-labelledby="assessments-tab" tabindex="0">...</div>
         <div class="tab-pane fade" id="assessmentscores-tab-pane" role="tabpanel" aria-labelledby="assessmentscores-tab" tabindex="0">...</div>

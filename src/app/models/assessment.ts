@@ -1,14 +1,25 @@
-export class Assessment{
-    id:number
-    assessmentName:string
-    assessmentTotalMarks:number
-    img_path:string
-    active:boolean
-    constructor(id:number,assessmentName:string,assessmentTotalMarks:number,img_path:string,active:boolean){
-        this.id=id
-        this.assessmentName=assessmentName
-        this.assessmentTotalMarks=assessmentTotalMarks
-        this.img_path=img_path
-        this.active=active
+export class Assessment {
+    id: number;
+    assessmentNo: string;
+    assessmentDate: Date;
+    assessmentTime: string;
+    questions: string[];
+    facultyId: number;
+  
+    constructor(
+      id: number,
+      assessmentNo: string,
+      assessmentDate: Date,
+      assessmentTime: string,
+      questions: string[],
+      facultyId: number
+    ) {
+      this.id = id;
+      this.assessmentNo = assessmentNo;
+      this.assessmentDate = assessmentDate;
+      this.assessmentTime = assessmentTime;
+      this.questions = questions;
+      this.facultyId = facultyId;
     }
-}
+  }
+  

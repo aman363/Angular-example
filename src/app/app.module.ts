@@ -13,6 +13,7 @@ import { ContactUsComponent } from './components/contact-us/contact-us.component
 import { BannerComponent } from './components/banner/banner.component';
 import { AddUserComponent } from './components/add-user/add-user.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddCourseComponent } from './components/add-course/add-course.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AdminComponent,
     ContactUsComponent,
     BannerComponent,
-    AddUserComponent
+    AddUserComponent,
+    AddCourseComponent
   ],
   imports: [
     BrowserModule,

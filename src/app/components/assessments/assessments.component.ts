@@ -9,7 +9,7 @@ import { AssessmentService } from '../../services/assessment.service';
 })
 export class AssessmentsComponent {
    arrAssessments:Assessment[]=[]
-   assessment:Assessment= new Assessment(0,'',0,'',true)
+   assessment:Assessment= new Assessment(0,'',new Date(),'',[],0)
 
  constructor(private assessmentService:AssessmentService){
   this.arrAssessments=this.assessmentService.getAssessments()
